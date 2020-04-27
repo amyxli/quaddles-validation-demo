@@ -11,6 +11,7 @@
     <script src="./js/plugins/jspsych-instructions.js"></script>  
     <script src="./js/plugins/jspsych-html-keyboard-response.js"></script> 
     <script src="./js/plugins/jspsych-html-button-response.js"></script>  
+    <script src="./js/plugins/jspsych-resize.js"></script>  
     <script src="./js/welcome.js"></script>
     <script src = "./js/jquery.min.js"></script>
     <!--  <script src= "./js/jspsych-pavlovia-3.0.0.js"></script>  -->
@@ -142,6 +143,20 @@
   // ----------------- the actual task
 
   // instructions
+
+  var resize = {
+    type: 'resize',
+    item_width: 3 + 3/8,
+    item_height: 2 + 1/8,
+    prompt: "<p style='font-size:16px;'>Um den Text in der für Ihren Bildschirm richtigen Größe darstellen zu können,<br>bitten wir Sie, sich nun eine Bankkarte zur Hand zu nehmen. Halten Sie die Karte direkt vor das blaue Feld"+
+      "<br>und ziehen Sie die rechte untere Ecke des Feldes so weit, dass es der Größe Ihrer Bankkarte entspricht."+
+      "<br><br>Wenn Sie die Größe des blauen Feldes passend eingestellt haben, klicken Sie bitte unten auf die Schaltfläche 'Weiter'.</p>",
+    pixels_per_unit: 150,
+    button_label: "<p style='font-size:16px;'>Weiter</p>",
+    data: {test_part: 'resize'}
+    };
+
+timeline.push(resize);
 
   var instructions = {
     type: 'instructions',

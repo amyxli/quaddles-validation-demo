@@ -153,7 +153,7 @@ welcome.section.demographics =
     '			<!-- Highest level of education -->' +
     '			<label for="Education"><b>Was ist Ihr höchster Bildungsabschluss? &nbsp;</b></label>  ' +
     '           <select name="education" id="education" class="drop-menu">' +
-    '<option>Bachelor\'s or higher</option><option>Some university</option><option>High school</option></select>' +
+    '<option>kein Abschluss</option><option>Hauptschule</option><option>Realschule</option><option>Abitur</option><option>Hochschulstudium</option><option>Promotion</option></select>' +
     '		<br><br>' +
     '		<!-- Demographics  button -->' +
     '        <p align="center">' +
