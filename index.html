@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -13,8 +12,8 @@
     <script src="./js/plugins/jspsych-html-button-response.js"></script>  
     <script src="./js/plugins/jspsych-resize.js"></script>  
     <script src="./js/welcome.js"></script>
-    <script src = "./js/jquery.min.js"></script>
-    <!--  <script src= "./js/jspsych-pavlovia-3.0.0.js"></script>  -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jspsych-pavlovia-3.0.0.js"></script>
     <link href="./js/css/jspsych.css" rel="stylesheet" type="text/css"></link>
   </head>
 
@@ -35,11 +34,11 @@
 
     /* init connection with pavlovia.org */
     
-    /*var pavlovia_init = {
+    var pavlovia_init = {
       type: "pavlovia",
       command: "init"
     };
-    timeline.push(pavlovia_init); */
+    timeline.push(pavlovia_init); 
 
     var turkcode = 'C' + (Math.floor(Math.random() * 899999) + 100000).toString();
 
@@ -151,7 +150,7 @@
     prompt: "<p style='font-size:16px;'>Um den Text in der für Ihren Bildschirm richtigen Größe darstellen zu können,<br>bitten wir Sie, sich nun eine Bankkarte zur Hand zu nehmen. Halten Sie die Karte direkt vor das blaue Feld"+
       "<br>und ziehen Sie die rechte untere Ecke des Feldes so weit, dass es der Größe Ihrer Bankkarte entspricht."+
       "<br><br>Wenn Sie die Größe des blauen Feldes passend eingestellt haben, klicken Sie bitte unten auf die Schaltfläche 'Weiter'.</p>",
-    pixels_per_unit: 150,
+    pixels_per_unit: 100,
     button_label: "<p style='font-size:16px;'>Weiter</p>",
     data: {test_part: 'resize'}
     };
@@ -216,21 +215,21 @@ timeline.push(resize);
     trial_duration: 3000,
   }
 
-  timeline.push(thankyou);
+  timeline.push(thankyou); 
 
   /* finish connection with pavlovia.org */
-  /*var pavlovia_finish = {
+  var pavlovia_finish = {
     type: "pavlovia",
     command: "finish"
     };
-  timeline.push(pavlovia_finish);  */
+  timeline.push(pavlovia_finish);  
 
   jsPsych.init({
         timeline: timeline,
         preload_images: images,
-        on_finish: function() {
+        /*on_finish: function() {
           jsPsych.data.get().localSave('csv','test.csv')
-         },  // uncomment to locally save data file
+         },  // uncomment to locally save data file */
         /*on_finish: function() {
           endExperiment(jsPsych.data.get().csv(), function() {document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px"><img src = "./img/Thank_you.png" width=1000px></div></div>') }
         )}, // uncomment for cloud save */
